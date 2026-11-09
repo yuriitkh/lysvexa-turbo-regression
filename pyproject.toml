@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turbo-regression-showcase"
+version = "0.1.0"
+description = "Test classification, deterministic scheduling and a worker registry for distributed pytest runs (source showcase, standard library only)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["turbo_regression*"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "examples"]
+testpaths = ["tests"]
+addopts = "-ra"
