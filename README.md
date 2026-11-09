@@ -1,8 +1,10 @@
-# Turbo Regression: test classification and scheduling
+# Lysvexa Turbo Regression — Distributed Test Planning Engine
 
 Turbo Regression decides **which pytest tests may run where, and in what order**, before anything is executed. This repository is a source showcase of its planning core: a conservative test classifier, a deterministic dry-run scheduler and a worker registry. It uses only the Python standard library.
 
 It is **not** a runner. Nothing in this repository starts pytest, opens a network connection or talks to a machine; the planner produces a plan and says why every test that cannot run is not in it.
+
+**Portfolio showcase:** working test classification, resource-aware scheduling, and worker registry modules extracted from a larger private system. This is a planning engine, **not** a distributed runner or installation-ready test execution platform.
 
 ## What the code demonstrates
 
